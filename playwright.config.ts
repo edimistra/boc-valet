@@ -1,4 +1,13 @@
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig } from '@playwright/test';
+import { OrtoniReportConfig } from 'ortoni-report';
+
+const reportConfig: OrtoniReportConfig = {
+  base64Image: true,
+  authorName: "Erick Dimistracopulos",
+  preferredTheme: "light",
+  projectName: "BOC Valet API Testing",
+  testType: "API"
+}
 
 /**
  * Read environment variables from file.
@@ -21,7 +30,7 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   //workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [['ortoni-report', reportConfig], ['dot']],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
