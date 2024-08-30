@@ -59,3 +59,6 @@ It also adds negative tests scenarios that exercises empty and invalid values fo
 - I would add the error message validation texts into test data variables to improve maintainabilit in the long term.
 - I would have tuned the script to optimize it for parallel execution
 - I would have explored other types of testing such as performance and load testing
+
+## HTML Report
+On every run a HTML report is generated, the file `ortoni-report.html` has to be opened from the Finder.
