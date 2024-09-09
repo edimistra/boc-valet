@@ -35,7 +35,7 @@ seriesArray.forEach((seriesName) => {
   
       // Log the AVG rate for the last weeks
       const avgForexRate = getAVGRate(responseBody.observations, seriesName);
-      console.log(`Average of observations for the last ${recentWeeks} ${recentWeeks == 1 ? 'week' : 'weeks'} ${avgForexRate.toFixed(4)}`);
+      console.log(`Average of ${seriesName} observations for the last ${recentWeeks} ${recentWeeks == 1 ? 'week' : 'weeks'} ${avgForexRate.toFixed(4)}`);
     });
   
     test('seriesDetail object should contain valid info', async () => {
