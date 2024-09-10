@@ -1,0 +1,20 @@
+{
+  "name": "boc-valet",
+  "version": "1.0.0",
+  "description": "Test Automation coding challenge",
+  "main": "index.js",
+  "scripts": {
+    "test-ui": "npx playwright test --ui",
+    "test": "npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.46.1",
+    "@types/node": "^22.5.1"
+  },
+  "dependencies": {
+    "ortoni-report": "^2.0.2"
+  }
+}
